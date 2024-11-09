@@ -4,7 +4,7 @@ mongoose.connection.on("error", (error) => {
   console.log("mongodb connection failed!", error.message);
 });
 const DB = process.env.DB_HOST.replace('<db_password>',process.env.DB_PASS)
-mongoose.connect(DB, {
+mongoose.connect(DB + 'shoes', {
   // useNewUrlParser: true,
   // useUnifiedTopology: true,
 }).then(()=>{
