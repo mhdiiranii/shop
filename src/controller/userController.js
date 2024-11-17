@@ -2,9 +2,7 @@ const User = require("../models/userModel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const validator = require("validator");
-const twilio = require("twilio")
 
-const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN)
 
 const validateEmail = (email) => validator.isEmail(email);
 const validateUsername = (username) => /^[a-zA-Z0-9_]{3,20}$/.test(username);
